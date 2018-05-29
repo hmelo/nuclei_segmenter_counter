@@ -27,7 +27,7 @@ In this notebook, I demonstrate such a cell segmentation tool by training a deep
 Overall the model does a good job at segmenting images and counting cells. Future development will focus on classification and counting of different cell types.
 
 <img src="/images/segment_results.png" width="85%">
-<img src="/images/counting.png" width="85%">
+<img src="/images/counting.png">
 
 ### Final thoughts
 The final result from this pipeline is a segmented image with cells counted. It works well as a first prototype and proof of concept but there is much room for improvement; for example, some of the cells overlap and get clustered together as one single cell, which also leads to under counting. Future post-processing using water shed techniques should help with this. Additionally, I'd like to try other network architectures including R-CNN.
