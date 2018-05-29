@@ -4,7 +4,7 @@ Deployment of U-net for nuclei segmentation and counting.
 
 ## Summary
 
-The purpose of this project is to demonstrate a simple application of deep learning for solving a problem within digital pathology. Some of the main image analysis tasks in digital pathology include detection and counting (e.g., mitotic events), segmentation (e.g., nuclei), and tissue classification (e.g., cancerous vs. non-cancerous). Unfortunately, issues with slide preparation, variations in staining and scanning across sites, and vendor platforms, as well as biological variance, such as the presentation of different grades of disease, make these image analysis tasks particularly challenging [1]. Traditional approaches rely heavily on task-specific “handcrafted” features and require extensive manual tuning to accommodate these variances which is expensive and inefficient [1,2]. Deep learning may be ideally suited to tackle these challenges as it offers a more domain agnostic approach combining both feature discovery and implementation to maximally discriminate between the classes of interest.
+The purpose of this project is to demonstrate a simple deep learning application for solving a problem within digital pathology. Some of the main image analysis tasks in digital pathology include detection and counting (e.g., mitotic events), segmentation (e.g., nuclei), and tissue classification (e.g., cancerous vs. non-cancerous). Unfortunately, issues with slide preparation, variations in staining and scanning across sites, and vendor platforms, as well as biological variance, such as the presentation of different grades of disease, make these image analysis tasks particularly challenging [1]. Traditional approaches rely heavily on task-specific “handcrafted” features and require extensive manual tuning to accommodate these variances which is expensive and inefficient [1,2]. Deep learning may be ideally suited to tackle these challenges as it offers a more domain agnostic approach combining both feature discovery and implementation to maximally discriminate between the classes of interest.
 
 The first step towards tackling these issues is perhaps to create a general AI tool to help pathologists segment and count cells within a sample slide.
 
@@ -27,7 +27,7 @@ In this notebook, I demonstrate such a cell segmentation tool by training a deep
 Overall the model does a good job at segmenting images and counting cells. Future development will focus on classification and counting of different cell types.
 
 <img src="/images/segment_results.png" width="85%">
-<img src="/images/counting.png">
+<img src="/images/counting.png" width="40%">
 
 ### Final thoughts
 The final result from this pipeline is a segmented image with cells counted. It works well as a first prototype and proof of concept but there is much room for improvement; for example, some of the cells overlap and get clustered together as one single cell, which also leads to under counting. Future post-processing using water shed techniques should help with this. Additionally, I'd like to try other network architectures including R-CNN.
